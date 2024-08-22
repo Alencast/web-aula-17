@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FORM js</title>
+</head>
+<body>
+
+    <div>
+
+       <label>A: <input type="text" id="a"><br></label>
+       <label>B: <input type="text" id="b"><br></label>
+       <button id="calcular">Calcular</button>
+       <button id="verificar">Verificar</button>
+       <p id="resultado">aqui</p>
+
+    </div>
+
+    <script>
+
+        document.getElementById('calcular').addEventListener('click', calcular);
+        document.getElementById('verificar').addEventListener('click', verificar);
+
+        function calcular(){
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            document.getElementById('resultado').innerText = "Resultado: " + (a*b);
+
+            
+            if (document.getElementById('a').value == ""){                
+                alert("Digite um número")
+            }
+                            
+            
+        }
+
+        function verificar(){
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+
+            if(a==b){
+                document.getElementById('a').style.border = "1em solid green";
+                document.getElementById('b').style.border = "1em solid green";
+            }
+            else{
+                document.getElementById('a').style.border = "1em solid red";
+                document.getElementById('b').style.border = "1em solid red";
+            }
+        }
+
+
+        document.body.addEventListener('keypress', function(e){
+            document.getElementById('cont').innerHTML = String.fromCharCode(e.keyCode);
+        })
+
+        document.body.onscroll = function(){
+            alert('teste scroll');
+        }
+    </script>
+    
+</body>
+</html>

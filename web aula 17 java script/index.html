@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS</title>
+    <style>
+        div{
+            float: left;
+            width: 20px;
+            height: 20px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>  
+
+    <div>
+
+        <input type="text" id="a"><br>
+        <input type="text" id="b"><br>
+        <button id="calcular">Calcular</button>
+
+    </div>
+    <p id="resultado"></p>
+
+    <script>
+      
+    var a, b, c;
+    a=17;
+    b=54;
+    c=a+b;
+    
+    console.log('Console 1');
+    document.write('<p>O valor de "C" é: '+c+' </p>');
+    document.getElementById('resultado').innerHTML = c;
+    // document.getElementById('resultado').innerText = c;
+    console.log('Console 2');
+
+        for(contador = 1; contador <= 3000; contador++){
+            r = Math.floor(Math.random() * 6);
+            g = Math.floor(Math.random() * 256);
+            b = Math.floor(Math.random() * 6);
+            document.write("<div style='background-color:rgb("+r+", "+g+", "+b+")'></div>")
+        }
+    </script>
+    
+</body>
+</html>
